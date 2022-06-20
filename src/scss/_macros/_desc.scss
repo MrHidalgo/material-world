@@ -1,0 +1,16 @@
+// DESC :: START
+
+.c-desc {
+  padding-bottom: 35px;
+  font-size: 18px;
+  line-height: 1.7;
+
+  &--white {
+    color: $c-white;
+  }
+  &--center {
+    text-align: center;
+  }
+}
+
+// DESC :: END

@@ -1,0 +1,17 @@
+// LINE :: START
+
+.c-line {
+  width: 100%;
+  max-width: 175px;
+  height: 2px;
+  margin-top: 15px;
+  margin-bottom: 35px;
+  background-color: $c-green;
+
+  &--center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// LINE :: END

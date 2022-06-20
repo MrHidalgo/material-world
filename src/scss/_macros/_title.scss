@@ -1,0 +1,15 @@
+// TITLE :: START
+
+.c-title {
+  @extend %fontYeseva;
+  font-size: 35px;
+
+  &--white {
+    color: $c-white;
+  }
+  &--center {
+    text-align: center;
+  }
+}
+
+// TITLE :: END

@@ -1,0 +1,115 @@
+// SECTION :: START
+
+.starmap {
+  padding-top: 75px;
+  padding-bottom: 75px;
+
+  &__box {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('../img/img-starmap-bg.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      right: -10px;
+      width: 100px;
+      height: 100px;
+      background-color: $c-green;
+    }
+
+    &-content {
+      z-index: 2;
+      position: relative;
+      padding: 20px 20px 20px 115px;
+      box-shadow: 0 5px 15px 0 rgba($c-black, 0.075);
+      background-color: rgba($c-white, 1);
+
+      &:after {
+        content: attr(data-num);
+        z-index: 5;
+        position: absolute;
+        top: -10px;
+        left: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 75px;
+        height: calc(100% + 10px);
+        background-color: $c-green;
+        @extend %fontYeseva;
+        font-size: 22px;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: -7px;
+        left: 88px;
+        width: 10px;
+        height: 10px;
+        border-width: 7px;
+        border-style: solid;
+        transform: rotate(134deg);
+        border-color: transparent transparent transparent darken($c-green, 30%);
+      }
+
+      > div {
+        z-index: 2;
+        position: relative;
+
+        h3 {
+          padding-bottom: 10px;
+          font-size: 18px;
+          font-weight: 600;
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          list-style-type: disc;
+          padding-left: 20px;
+
+          li {
+            list-style-type: disc;
+            font-size: 16px;
+
+            &:not(:last-of-type) {
+              padding-bottom: 5px;
+            }
+          }
+        }
+      }
+    }
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 25px;
+
+      > div {
+        &:not(:last-of-type) {
+          padding-bottom: 50px;
+        }
+      }
+    }
+  }
+}
+
+// SECTION :: END

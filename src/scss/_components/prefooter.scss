@@ -1,0 +1,15 @@
+// SECTION :: START
+
+.prefooter {
+  padding-top: 75px;
+  padding-bottom: 75px;
+
+  &__desc {
+    width: 100%;
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// SECTION :: END
