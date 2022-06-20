@@ -50,6 +50,13 @@
       grid-template-columns: 1fr 1fr 1fr 1fr;
       gap: 100px;
       padding-top: 50px;
+      @include adaptive(1023) {
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+      }
+      @include adaptive(767) {
+        grid-template-columns: 1fr;
+      }
     }
   }
 }

@@ -25,9 +25,15 @@
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 1fr;
+    @include adaptive(767) {
+      grid-template-columns: 1fr;
+    }
 
     > div {
       padding: 50px 30px;
+      @include adaptive(767) {
+        padding: 25px 0;
+      }
     }
 
     ul {
@@ -41,6 +47,10 @@
         font-size: 16px;
       }
     }
+  }
+
+  &__describe {
+    padding-bottom: 0;
   }
 
   &__images {

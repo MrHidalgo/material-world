@@ -9,6 +9,11 @@
       align-items: center;
       padding-top: 100px;
       padding-bottom: 100px;
+      @include adaptive(767) {
+        flex-wrap: wrap;
+        padding-top: 75px;
+        padding-bottom: 75px;
+      }
     }
     &-2 {
       border-top: 1px solid rgba($c-white, 0.2);
@@ -20,6 +25,21 @@
     &-right {
       width: 100%;
       max-width: 320px;
+      @include adaptive(767) {
+        max-width: 100%;
+      }
+    }
+
+    &-left {
+      @include adaptive(767) {
+        order: 2;
+      }
+    }
+
+    &-right {
+      @include adaptive(767) {
+        order: 3;
+      }
     }
 
     &-middle {
@@ -31,12 +51,19 @@
       max-width: 100%;
       padding-left: 15px;
       padding-right: 15px;
+      @include adaptive(767) {
+        order: 1;
+        padding-bottom: 35px;
+      }
     }
   }
 
   &__address {
     display: flex;
     flex-direction: column;
+    @include adaptive(767) {
+      align-items: center;
+    }
 
     p {
       font-size: 16px;
@@ -55,6 +82,9 @@
     display: flex;
     align-items: flex-end;
     flex-direction: column;
+    @include adaptive(767) {
+      align-items: center;
+    }
 
     a {
       font-size: 16px;

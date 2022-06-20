@@ -7,6 +7,10 @@
   &__block {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    @include adaptive(767) {
+      grid-template-columns: 1fr;
+      padding-bottom: 30px;
+    }
 
     > div {
       position: relative;
@@ -17,11 +21,17 @@
       grid-template-columns: 1fr;
       padding-top: 50px;
       padding-bottom: 75px;
+      @include adaptive(767) {
+        padding-top: 0;
+      }
     }
 
     &-content {
       padding: 50px;
       text-align: center;
+      @include adaptive(767) {
+        padding: 30px 0;
+      }
     }
 
     &-visual {
@@ -31,9 +41,15 @@
       width: 100%;
       height: 100%;
       background-color: $c-green;
+      @include adaptive(767) {
+        position: static;
+      }
 
       img {
         @extend %imageResCoverAbs;
+        @include adaptive(767) {
+          position: relative;
+        }
       }
     }
 
@@ -46,6 +62,9 @@
     &-desc {
       padding-bottom: 0;
       font-size: 16px;
+      @include adaptive(767) {
+        font-size: 14px;
+      }
     }
   }
 
@@ -53,6 +72,9 @@
     display: grid;
     align-items: center;
     grid-template-columns: 200px 150px 1fr;
+    @include adaptive(1023) {
+      grid-template-columns: 1fr;
+    }
 
     &:not(:last-of-type) {
       padding-bottom: 50px;
@@ -67,6 +89,13 @@
       margin-left: auto;
       border-radius: 50%;
       background-color: $c-green;
+      @include adaptive(1023) {
+        margin-left: 0;
+      }
+      @include adaptive(767) {
+        margin-left: auto;
+        margin-right: auto;
+      }
 
       .c-title {
         font-size: 30px;
@@ -82,6 +111,9 @@
     &-content {
       display: flex;
       border: 2px solid $c-green;
+      @include adaptive(767) {
+        flex-direction: column;
+      }
 
       > div {
         display: flex;
@@ -90,9 +122,16 @@
         width: 100%;
         max-width: 50%;
         padding: 30px;
+        @include adaptive(767) {
+          max-width: 100%;
+        }
 
         &:nth-of-type(1) {
           border-right: 2px solid $c-green;
+          @include adaptive(767) {
+            border-right: none;
+            border-bottom: 2px solid $c-green;
+          }
         }
 
         img {

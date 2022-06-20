@@ -4,6 +4,9 @@
   padding-bottom: 35px;
   font-size: 18px;
   line-height: 1.7;
+  @include adaptive(767) {
+    font-size: 16px;
+  }
 
   &--white {
     color: $c-white;

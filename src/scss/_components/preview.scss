@@ -8,6 +8,14 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  @include adaptive(1023) {
+    padding-top: 175px;
+    padding-bottom: 175px;
+  }
+  @include adaptive(767) {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
 
   &:before {
     content: '';

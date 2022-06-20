@@ -91,6 +91,12 @@
       grid-template-columns: 1fr 1fr 1fr 1fr;
       gap: 30px;
       padding-top: 30px;
+      @include adaptive(1023) {
+        grid-template-columns: 1fr 1fr;
+      }
+      @include adaptive(767) {
+        grid-template-columns: 1fr;
+      }
     }
   }
 }

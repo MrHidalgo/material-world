@@ -3,9 +3,15 @@
 .c-title {
   @extend %fontYeseva;
   font-size: 35px;
+  @include adaptive(767) {
+    font-size: 30px;
+  }
 
   &--big {
     font-size: 45px;
+    @include adaptive(767) {
+      font-size: 40px;
+    }
   }
   &--white {
     color: $c-white;
