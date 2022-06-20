@@ -1,5 +1,42 @@
 // HEADER :: START
 
-.header {}
+.header {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 5px 15px 0 rgba($c-black, 0.075);
+  background-color: $c-black;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+
+    a {
+      display: flex;
+      font-size: 14px;
+      color: $c-white;
+      font-weight: bold;
+      @include transition(color);
+
+      &:hover {
+        color: $c-green;
+        @include transition(color);
+      }
+
+      &:not(:last-of-type) {
+        margin-right: 20px;
+      }
+    }
+  }
+}
 
 // HEADER :: END

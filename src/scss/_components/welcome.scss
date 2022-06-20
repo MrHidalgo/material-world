@@ -1,0 +1,47 @@
+// SECTION :: START
+
+.welcome {
+  min-height: 75px;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+
+  &__visual {
+    display: block;
+    max-width: 500px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__label {
+    font-size: 18px;
+    @extend %fontYeseva;
+  }
+
+  &__subtitle {
+    padding-bottom: 25px;
+    @extend %fontYeseva;
+    font-size: 22px;
+  }
+
+  &__desc {
+    padding-bottom: 50px;
+  }
+
+  &__btn {
+    .c-btn {
+      & + .c-btn {
+        margin-left: 15px;
+      }
+    }
+  }
+}
+
+// SECTION :: END

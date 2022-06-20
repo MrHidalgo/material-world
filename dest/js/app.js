@@ -104,6 +104,19 @@ window.addEventListener('load', function (ev) {
   // COMMON
   _common_common__WEBPACK_IMPORTED_MODULE_0__["default"].initLoad(); // MACROS
 
+  var initSmoothScroll = function initSmoothScroll() {
+    var btnName = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "[anchor-js]";
+    var animateSpeed = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1000;
+    $(btnName).on("click", function (e) {
+      var linkHref = $(e.currentTarget).attr('href'),
+          headerHeight = $(".header").outerHeight() || 0,
+          topHeightOffset = $(linkHref).offset().top - headerHeight;
+      $('body, html').animate({
+        scrollTop: topHeightOffset
+      }, animateSpeed);
+    });
+  };
+
   $('.faq__collapse-head').on('click', function (ev) {
     if ($(ev.currentTarget).hasClass('is-active')) {
       $(ev.currentTarget).siblings('.faq__collapse-body').slideUp(350);
@@ -115,6 +128,7 @@ window.addEventListener('load', function (ev) {
       $(ev.currentTarget).siblings('.faq__collapse-body').slideDown(350);
     }
   });
+  initSmoothScroll();
 }, false); // EVENT LISTENER - SCROLL
 // ========================================
 

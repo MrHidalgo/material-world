@@ -4,6 +4,9 @@
   @extend %fontYeseva;
   font-size: 35px;
 
+  &--big {
+    font-size: 45px;
+  }
   &--white {
     color: $c-white;
   }

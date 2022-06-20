@@ -27,9 +27,15 @@
 //@import "_macros/modal";
 
 /// COMPONENTS
-//@import "_components/common/header";
+@import "_components/common/header";
 @import "_components/common/footer";
 
+@import "_components/welcome";
+@import "_components/preview";
+@import "_components/system";
+@import "_components/foundation";
+@import "_components/roll";
+@import "_components/team";
 @import "_components/starmap";
 @import "_components/faq";
 @import "_components/prefooter";

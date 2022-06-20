@@ -1,0 +1,127 @@
+// SECTION :: START
+
+.roll {
+  padding-top: 75px;
+  padding-bottom: 75px;
+
+  &__block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    > div {
+      position: relative;
+    }
+
+    &-wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      padding-top: 50px;
+      padding-bottom: 75px;
+    }
+
+    &-content {
+      padding: 50px;
+      text-align: center;
+    }
+
+    &-visual {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $c-green;
+
+      img {
+        @extend %imageResCoverAbs;
+      }
+    }
+
+    &-title {
+      padding-bottom: 10px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    &-desc {
+      padding-bottom: 0;
+      font-size: 16px;
+    }
+  }
+
+  &__box {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 200px 150px 1fr;
+
+    &:not(:last-of-type) {
+      padding-bottom: 50px;
+    }
+
+    &-round {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 150px;
+      height: 150px;
+      margin-left: auto;
+      border-radius: 50%;
+      background-color: $c-green;
+
+      .c-title {
+        font-size: 30px;
+        line-height: 1.2;
+      }
+    }
+
+    &-line {
+      max-width: 100%;
+      margin: 0;
+    }
+
+    &-content {
+      display: flex;
+      border: 2px solid $c-green;
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 50%;
+        padding: 30px;
+
+        &:nth-of-type(1) {
+          border-right: 2px solid $c-green;
+        }
+
+        img {
+          display: block;
+          max-width: 200px;
+          height: auto;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        p {
+          padding-top: 25px;
+          font-size: 20px;
+          font-weight: bold;
+          text-align: center;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 1024px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+// SECTION :: END

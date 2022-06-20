@@ -1,0 +1,57 @@
+// SECTION :: START
+
+.team {
+  padding-top: 75px;
+  padding-bottom: 75px;
+  background-color: $c-green;
+
+  &__desc {
+    width: 100%;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-head {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      max-width: 175px;
+      height: 225px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 50%;
+      box-shadow: 0 5px 15px 0 rgba($c-black, 0.075);
+
+      img {
+        @extend %imageResCoverAbs;
+      }
+    }
+
+    &-body {
+      padding-top: 20px;
+
+      p {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        color: $c-black;
+      }
+    }
+
+    &-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 100px;
+      padding-top: 50px;
+    }
+  }
+}
+
+// SECTION :: END

@@ -8,6 +8,9 @@
   margin-bottom: 35px;
   background-color: $c-green;
 
+  &--white {
+    background-color: #ffffff;
+  }
   &--center {
     margin-left: auto;
     margin-right: auto;

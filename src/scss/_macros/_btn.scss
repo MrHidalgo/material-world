@@ -25,7 +25,7 @@
 
   &:hover {
     box-shadow: 0 -5px 10px 0 rgba($c-black, 0.1);
-    background-color: transparent;
+    background-color: $c-white;
     @include transition(box-shadow, background-color);
   }
 

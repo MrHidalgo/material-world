@@ -3,6 +3,14 @@
 .logo {
   display: flex;
 
+  &.logo--header {
+    .logo__btn {
+      img {
+        max-width: 100px;
+      }
+    }
+  }
+
   &.logo--footer {
     .logo__btn {
       img {
